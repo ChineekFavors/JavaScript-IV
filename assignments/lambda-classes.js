@@ -62,13 +62,13 @@ class ProjectManager extends Instructor {
 		return `${name} announces to ${channel}, @channel standy times!`;
 	};
 
-	debugsCode(obj){
-		return `${obj.name} debugs code on ${obj.favSubjects[1]}`;
+	debugsCode(obj, subject){
+		return `${obj.name} debugs code on ${subject}`;
 	};
 }
 
-let sean = new ProjectManager({name: 'sean', age: 28, location: 'San francisco Ca', specialty: 'JavaScript', favLanguage: 'Js' , catchPhrase: 'I will be your PM', previousBackground:'student', className: 'webpt6', gradClassName: 'cs1', favInstructor: 'Pope' });
-console.log(sean.debugsCode(chineek));
+let sean = new ProjectManager({name: 'sean', age: 28, location: 'San francisco Ca', specialty: 'JavaScript', favLanguage: 'Js' , catchPhrase: 'I will be your PM', previousBackground:'student', gradClassName: 'cs1', favInstructor: 'Pope' });
+console.log(sean);
 
 
 
