@@ -27,9 +27,7 @@ class Instructor extends Person {
 		return `${studentObject} receives a perfect score on ${subject}`;
 	};
 }
-let fred = new Instructor({name: 'fred', age: 37, location:'bedrock' ,specialty: 'front-end', favLanguage: 'JavaScript', catchPhrase: 'Don\'t for get the homies'});
-console.log(fred);
-console.log(fred.grade('chineek', 'JavaScript4'));
+
 
 class Student extends Person {
 	constructor(attributes){
@@ -52,7 +50,7 @@ class Student extends Person {
 
 const chineek = new Student({name: 'chineek', age: 44,location: 'Oakland Ca', specialty: 'html', favLanguage: 'css' , catchPhrase: 'I can learn JavaScript with practice', previousBackground:'driver', className: 'webpt7', favSubjects: ['js','html','css']});
 
-//console.log(chineek);
+
 
 class ProjectManager extends Instructor {
 	constructor(attributes){
@@ -65,12 +63,12 @@ class ProjectManager extends Instructor {
 	};
 
 	debugsCode(obj){
-		return `${obj.name} debugs code on ${this.favSubjects[1]}`;
-	}
+		return `${obj.name} debugs code on ${obj.favSubjects[1]}`;
+	};
 }
 
-const sean = new Instructor({name: 'sean', age: 28,location: 'San francisco Ca', specialty: 'JavaScript', favLanguage: 'Js' , catchPhrase: 'I will be your PM', previousBackground:'student', className: 'webpt6', favSubjects: ['python','JavaScript','react'], gradClassName: 'cs1', favInstructor: 'Pope' });
-console.log(sean);
+let sean = new ProjectManager({name: 'sean', age: 28, location: 'San francisco Ca', specialty: 'JavaScript', favLanguage: 'Js' , catchPhrase: 'I will be your PM', previousBackground:'student', className: 'webpt6', gradClassName: 'cs1', favInstructor: 'Pope' });
+console.log(sean.debugsCode(chineek));
 
 
 
